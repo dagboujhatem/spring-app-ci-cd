@@ -1,5 +1,4 @@
-
-**#### Mini-projet **
+## Mini-projet 
 
 ### Contexte :
 
