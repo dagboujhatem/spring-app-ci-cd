@@ -1,8 +1,8 @@
-## Mini-projet 
+## Mini-projet: DevOps <> Spring
 
 ### Contexte :
 
-Vous travaillez sur un projet de développement d'une application **Spring** pour Inventiv IT. L'équipe de développement utilise GitLab pour le contrôle de version, la collaboration et l'intégration continue. En tant que **DevOps**, vous devez vous assurer que les processus de développement et de déploiement fonctionnent correctement.
+Vous travaillez sur un projet de développement d'une application **Spring** pour Inventiv IT (le code source de l'application est ci-dessus). L'équipe de développement utilise GitLab pour le contrôle de version, la collaboration et l'intégration continue. En tant que **DevOps**, vous devez vous assurer que les processus de développement et de déploiement fonctionnent correctement.
 
 ### Objectifs :
 
