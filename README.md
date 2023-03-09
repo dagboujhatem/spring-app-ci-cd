@@ -1,6 +1,9 @@
 
+**#### Mini-projet **
+
 ### Contexte :
-Vous travaillez sur un projet de développement d'une application web pour une entreprise fictive. L'équipe de développement utilise GitLab pour le contrôle de version, la collaboration et l'intégration continue. En tant que DevOps, vous devez vous assurer que les processus de développement et de déploiement fonctionnent correctement.
+
+Vous travaillez sur un projet de développement d'une application **Spring** pour Inventiv IT. L'équipe de développement utilise GitLab pour le contrôle de version, la collaboration et l'intégration continue. En tant que **DevOps**, vous devez vous assurer que les processus de développement et de déploiement fonctionnent correctement.
 
 ### Objectifs :
 
@@ -21,14 +24,14 @@ Vérifier que le déploiement de l'application sur un Cluster K8S de test se dé
 2. Configurer l'intégration continue :
 
 - [ ] Créér le fichier DockerFile compatible avec la version Java de l'application
-- [ ] Créér le fichier deployement.yml afin de préparer le déploiement dur un cluster K8S
+- [ ] Créér le fichier deployement.yml afin de préparer le déploiement dur un **cluster K8S**
 - [ ] Créer puis Configurez le ficher.gitlab-ci.yml pour exécuter automatiquement les étapes de compilation et de packaging de l'application.
 - [ ] Configurez le ficher.gitlab-ci.yml pour déployer automatiquement l'application sur un Cluster K8S de votre choix
 
-3. Tester l'application sur l'environnement de test : Cluster K8S
+3. Tester l'application sur l'environnement de test : Cluster K8S 
 
 - [ ] Accédez à l'application sur l'environnement de test pour vérifier que toutes les fonctionnalités de base fonctionnent correctement: 
-    --> Exécutez l’appel HTTP CLUSTER_IP:8080/ vérifier que le mesasge suivante s'affiche correctement: "Spring is here!"
+    --> Exécutez l’appel HTTP [CLUSTER_IP:8080/](url) vérifier que le message suivante s'affiche correctement: "Spring is here!"
 
 
 ### Livrables attendues :
@@ -39,4 +42,4 @@ Vérifier que le déploiement de l'application sur un Cluster K8S de test se dé
 
 - [ ] Le fichier .gitlab-ci.yml
 
-- [ ] URL de l'application déployée sur le Cluster K8S CLUSTER_IP:8080/ 
+- [ ] URL de l'application déployée sur le Cluster K8S [CLUSTER_IP:8080/](url) 
