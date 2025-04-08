@@ -34,9 +34,12 @@ docker:
 
 deploy:
   stage: deploy
-  image: google/cloud-sdk:alpine
+  image: bitnami/kubectl:latest
   environment:
     name: production
+  before_script:
+    - mkdir -p ~/.kube
+    - echo "$KUBECONFIG_FILE" > ~/.kube/config
+    - kubectl apply -f deployment.yml
   script:
-    - kubectl config use-context your-k8s-context
     - kubectl apply -f deployment.yml
