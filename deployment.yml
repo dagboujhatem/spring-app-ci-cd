@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: spring-app
-          image: registry.gitlab.com/your-username/your-repo-name:spring-latest
+          image: registry.gitlab.com/albinuslab/technical-tests/tests-workspace/spring-app-ci-cd:spring-latest
           ports:
             - containerPort: 8080
 ---
