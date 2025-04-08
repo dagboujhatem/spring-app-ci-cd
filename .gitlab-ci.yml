@@ -7,9 +7,6 @@ stages:
 variables:
   IMAGE_TAG: $CI_REGISTRY_IMAGE:spring-latest
 
-before_script:
-  - echo "$CI_JOB_TOKEN" | docker login -u gitlab-ci-token --password-stdin $CI_REGISTRY
-
 build:
   stage: build
   image: maven:3-jdk-8-alpine
@@ -27,6 +24,8 @@ docker:
   image: docker:latest
   services:
     - docker:19.03.12-dind
+  before_script:
+    - echo "$CI_JOB_TOKEN" | docker login -u gitlab-ci-token --password-stdin $CI_REGISTRY
   script:
     - docker build -t $IMAGE_TAG .
     - docker push $IMAGE_TAG
