@@ -1,0 +1,35 @@
+stages:
+  - build
+  - test
+  - docker
+  - deploy
+
+variables:
+  IMAGE_TAG: $CI_REGISTRY_IMAGE:spring-latest
+
+before_script:
+  - echo "$CI_JOB_TOKEN" | docker login -u gitlab-ci-token --password-stdin $CI_REGISTRY
+
+build:
+  stage: build
+  script:
+    - ./mvnw clean compile
+
+test:
+  stage: test
+  script:
+    - ./mvnw test
+
+docker:
+  stage: docker
+  script:
+    - docker build -t $IMAGE_TAG .
+    - docker push $IMAGE_TAG
+
+deploy:
+  stage: deploy
+  environment:
+    name: production
+  script:
+    - kubectl config use-context your-k8s-context
+    - kubectl apply -f deployment.yml
