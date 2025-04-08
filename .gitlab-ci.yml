@@ -11,12 +11,14 @@ build:
   stage: build
   image: maven:3-jdk-8-alpine
   script:
+    - chmod +x ./mvnw
     - ./mvnw clean compile
 
 test:
   stage: test
   image: maven:3-jdk-8-alpine
   script:
+    - chmod +x ./mvnw
     - ./mvnw test
 
 docker:
